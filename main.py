@@ -156,5 +156,3 @@ def recognize(img):
         return 'unknown_person', False
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
