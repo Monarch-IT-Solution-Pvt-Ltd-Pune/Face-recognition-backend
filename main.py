@@ -115,8 +115,10 @@ def get_attendance_logs():
     shutil.make_archive(filename[:-4], 'zip', ATTENDANCE_LOG_DIR)
     return send_from_directory('.', filename, as_attachment=True)
 
-import pickle
-
+@app.route('/', methods=['GET'])
+@cross_origin()
+def helloWorld():
+    return "Hello World"
 
 def recognize(img):
     embeddings_unknown = face_recognition.face_encodings(img)
